@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {Header} from "./components/Header/Header";
+import {LeftPanel} from "./components/LeftPanel/LeftPanel";
+import {Content} from "./components/Content/Content/Content";
+import {RightPanel} from "./components/RightPanel/RightPanel";
+import {Footer} from "./components/Footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className={'w-auto h-screen'}>
+            <Header/>
+            <div className={'flex overflow-auto justify-between h-[calc(100%-150px)]'}>
+                <LeftPanel/>
+                <Content/>
+                <RightPanel/>
+            </div>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
